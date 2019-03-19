@@ -1,0 +1,15 @@
+{
+  "name": "trabajo1",
+  "version": "1.0.0",
+  "description": "Primer trabajo - Fundamentos de NodeJs",
+  "main": "principal.js",
+  "dependencies": {
+    "yargs": "^13.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jhojan Beltrán pipeflx85@gmail.com",
+  "license": "ISC"
+}
