@@ -1,6 +1,8 @@
 //Importaciones
 const cursos = require('./datos');
 const fs = require('fs');
+const express = require('express');
+const app = express();
 
 //Opciones
 const options = {
@@ -49,10 +51,17 @@ let createFile = (name, cc, curso) => {
 		' se ha matriculado en el curso de ' + curso.nombre + ' (ID: ' +
 		curso.id + '), el cual tiene una duración de: ' + 
 		curso.duracion + ' horas y tiene un valor de: $' + curso.valor;
+	//Para crear el archivo
+	/*
 	fs.writeFile('matriculado.txt', txt, (err) => {
 		if(err) throw (err);
 		console.log('\nSe ha creado el archivo');
+	*/
+	//Para mostrar por el servidor
+	app.get('/', function(req, res) {
+		res.send(txt)
 	});
+	app.listen(3000);
 };
 
 //Función para verificar y matricular
